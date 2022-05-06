@@ -38,4 +38,10 @@ contract PickupLines {
         hasWrote[msg.sender] = true;
         emit NewPickUpLine(msg.sender, block.timestamp, _line);
     }
+
+    // Function to get all the lines submitted to the contract
+    function getTotalLines() public view returns (uint256) {
+        console.log("We have %s total PickUpLines.", totalLines);
+        return totalLines;
+    }
 }
